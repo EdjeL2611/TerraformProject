@@ -10,7 +10,7 @@ variable "location" {
 }
 
 variable "storage_account_name" {
-  type = string
+  type        = string
   description = "name of storage account"
 }
 
