@@ -25,3 +25,6 @@ plan.out
 # VS Code
 .vscode/
 .history/
+
+# Plan files
+*.tfplan
