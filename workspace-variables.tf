@@ -1,10 +1,11 @@
-variable "analytics_workspace_name" {
+variable "log_analytics_workspace_name" {
+  description = "The name of the Log Analytics Workspace"
   type        = string
-  description = "name of the analytics workspace"
 }
 
- variable "sku" {
-   type = string
-   description = "Defines the SKU of the Log Analytics Workspace."
-   default = "PerGB2018"    
- }
+variable "sku" {
+  description = "The SKU of the Log Analytics Workspace"
+  type        = string
+  default     = "PerGB2018"
+
+}
