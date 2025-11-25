@@ -11,3 +11,9 @@ resource "azurerm_storage_account" "ProjectAccount" {
   account_replication_type = var.storage_account_replication_type
 
 }
+
+resource "random_string" "suffix" {
+  length  = 4
+  upper   = false
+  special = false
+}
