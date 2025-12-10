@@ -12,7 +12,19 @@ resource "azurerm_container_app" "containerapp" {
       memory = "1.0Gi"
     }
   }
+
+  ingress {
+    external_enabled = true
+    target_port      = 80
+    transport        = "Auto"
+
+    traffic_weight {
+      latest_revision = true
+      percentage      = 100
+    }
+  }
 }
+
 
 resource "azapi_update_resource" "containerapp_scale" {
   type        = "Microsoft.App/containerApps@2024-03-01"
